@@ -1,0 +1,15 @@
+# File created to store robot test results and screenshots
+robot_tests_results/
+robot_tests_results/*
+
+# Robot Framework File Ignore
+*tmp*
+*.pyc
+*$py.class
+.DS_Store
+*log*.html
+*report*.html
+*output*.xml
+*.log
+*selenium-screenshot-*.png
+*.zip
