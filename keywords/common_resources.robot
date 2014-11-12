@@ -5,6 +5,7 @@ Documentation     A resource file with reusable keywords and variables.
 ...               domain specific language. They utilize keywords provided
 ...               by the imported Selenium2Library.
 Variables         libs/variables.py
+Variables         libs/app_variables.py
 Library           Selenium2Library
 Library           Collections
 Library           SauceLabs
