@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation     A resource file for the Home Page
+Documentation     A resource file for the HOME Page
 Resource       ../common_resources.robot
 
 *** Variables ***

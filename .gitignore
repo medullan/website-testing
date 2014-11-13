@@ -1,7 +1,7 @@
 # File created to store robot test results and screenshots
 robot_tests_results/
 robot_tests_results/*
-screenshots/
+#screenshots/
 
 # Robot Framework File Ignore
 *tmp*

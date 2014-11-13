@@ -1,1 +1,6 @@
-tests/ui/
+tests/home/home_test.robot
+tests/home/ideas/
+tests/home/people/
+tests/home/work/
+tests/home/about/
+tests/home/contact/
