@@ -24,7 +24,7 @@ This repository contains the robot tests for visual and functional testing of Me
 ######  For Testing on Sauce Labs with Applitools
 <pre>
   <code>
-    pybot --outputdir robot_test_results --variable HOST:'http://h3ju.squarespace.com/' --variable APPLITOOLS_KEY:'s98X9TqoLDyzhYGaimes7MRXsLeupwG68xPReJ6RPhnU110' --variable APPLITOOLS_APP_NAME:'Medullan' --variable SAUCE_URL:'http://Chickoree:d61c8e10-8463-43a7-8f87-c096dd42ade7@ondemand.saucelabs.com:80/wd/hub' --variable SAUCE_CAPABILITIES:'platform:OS X 10.9,browserName:firefox,version:33' --argumentfile full_suite.txt
+    pybot --outputdir robot_test_results --variable HOST:'http://h3ju.squarespace.com/' --variable APPLITOOLS_KEY:'s98X9TqoLDyzhYGaimes7MRXsLeupwG68xPReJ6RPhnU110' --variable APPLITOOLS_APP_NAME:'Medullan' --variable SAUCE_URL:'http://webmaster-medullan:edd0afbf-d682-40a3-b747-6fe384893215@ondemand.saucelabs.com:80/wd/hub' --variable SAUCE_CAPABILITIES:'platform:OS X 10.9,browserName:firefox,version:33' --argumentfile full_suite.txt
   </code>
 </pre>
 
@@ -38,7 +38,7 @@ This repository contains the robot tests for visual and functional testing of Me
 ######  For Local Testing without SauceLabs and without Applitools
 <pre>
   <code>
-    pybot --outputdir robot_test_results --variable HOST:'http://h3ju.squarespace.com/' --variable BROWSER:'phantomjs' --argumentfile er_tests.txt
+    pybot --outputdir robot_test_results --variable HOST:'http://h3ju.squarespace.com/' --variable BROWSER:'phantomjs' --argumentfile full_suite.txt
   </code>
 </pre>
 
