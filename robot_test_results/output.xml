@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20141022 11:03:58.677" generator="Robot 2.8.5 (Python 2.7.5 on darwin)">
+<suite source="/Users/matthewchickoree/Documents/workspace/humana-ui-automated-testing/tests/ui/home_page_test.robot" id="s1" name="Home Page Test">
+<kw type="setup" name="common_resources.Open test browser">
+<doc>Open Browser ${LOGIN_URL} ${BROWSER}  build:testing,platform:Windows 8.1,browserName:internet explorer,version:11</doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Open Browser">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>remote_url=${REMOTE_URL}</arg>
+<arg>desired_capabilities=${DESIRED_CAPABILITIES}</arg>
+</arguments>
+<msg timestamp="20141022 11:03:58.781" level="FAIL">Non-existing variable '${LOGIN URL}'.</msg>
+<status status="FAIL" endtime="20141022 11:03:58.781" starttime="20141022 11:03:58.781"></status>
+</kw>
+<status status="FAIL" endtime="20141022 11:03:58.781" starttime="20141022 11:03:58.780"></status>
+</kw>
+<test id="s1-t1" name="I can go to the home page">
+<doc></doc>
+<tags>
+</tags>
+<status status="FAIL" endtime="20141022 11:03:58.782" critical="yes" starttime="20141022 11:03:58.781">Parent suite setup failed:
+Non-existing variable '${LOGIN URL}'.</status>
+</test>
+<kw type="teardown" name="common_resources.Teardown Browser">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="BuiltIn.Run Keyword If">
+<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
+<arguments>
+<arg>'${REMOTE_URL}' != ''</arg>
+<arg>Report Sauce status</arg>
+<arg>${SUITE_NAME} | ${TEST_NAME}</arg>
+<arg>${TEST_STATUS}</arg>
+<arg>${TEST_TAGS}</arg>
+<arg>${REMOTE_URL}</arg>
+</arguments>
+<status status="PASS" endtime="20141022 11:03:58.783" starttime="20141022 11:03:58.783"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Run Keyword And Continue On Failure">
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<arguments>
+<arg>Close Eyes Session</arg>
+</arguments>
+<kw type="kw" name="Close Eyes Session">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20141022 11:03:58.784" level="FAIL">No keyword with name 'Close Eyes Session' found.</msg>
+<status status="FAIL" endtime="20141022 11:03:58.784" starttime="20141022 11:03:58.784"></status>
+</kw>
+<status status="FAIL" endtime="20141022 11:03:58.784" starttime="20141022 11:03:58.783"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Close All Browsers">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20141022 11:03:58.784" starttime="20141022 11:03:58.784"></status>
+</kw>
+<status status="FAIL" endtime="20141022 11:03:58.785" starttime="20141022 11:03:58.782">No keyword with name 'Close Eyes Session' found.</status>
+</kw>
+<doc>Test Suite for the Home Page
+
+These tests test that the home page works, i.e.
+when a user is not logged in that they are taken
+to this page whereby they can no enter valid
+credentials to access their existing account or
+they can register for a Carepass account</doc>
+<metadata>
+</metadata>
+<status status="FAIL" endtime="20141022 11:03:58.785" starttime="20141022 11:03:58.678">Suite setup failed:
+Non-existing variable '${LOGIN URL}'.
+
+Also suite teardown failed:
+No keyword with name 'Close Eyes Session' found.</status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" pass="0" id="s1" name="Home Page Test">Home Page Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20141022 11:03:58.708" level="ERROR">Error in file '/Users/matthewchickoree/Documents/workspace/humana-ui-automated-testing/keywords/common_resources.robot': Setting variable '${LOGIN_URL} = "http://{PARTIAL_LOGIN_URL}"' failed: Invalid variable name '${LOGIN_URL} = "http://{PARTIAL_LOGIN_URL}"'.</msg>
+<msg timestamp="20141022 11:03:58.708" level="ERROR">Error in file '/Users/matthewchickoree/Documents/workspace/humana-ui-automated-testing/keywords/common_resources.robot': Setting variable '${INVALID_LOGIN_URL} = "http://@{INVALID_USER}{PARTIAL_LOGIN_URL}"' failed: Invalid variable name '${INVALID_LOGIN_URL} = "http://@{INVALID_USER}{PARTIAL_LOGIN_URL}"'.</msg>
+<msg timestamp="20141022 11:03:58.708" level="ERROR">Error in file '/Users/matthewchickoree/Documents/workspace/humana-ui-automated-testing/keywords/common_resources.robot': Setting variable '${VALID_LOGIN_URL} = "http://@{VALID_USER}{PARTIAL_LOGIN_URL}"' failed: Invalid variable name '${VALID_LOGIN_URL} = "http://@{VALID_USER}{PARTIAL_LOGIN_URL}"'.</msg>
+<msg timestamp="20141022 11:03:58.709" level="ERROR">Error in file '/Users/matthewchickoree/Documents/workspace/humana-ui-automated-testing/keywords/common_resources.robot': Importing variable file '/Users/matthewchickoree/Documents/workspace/humana-ui-automated-testing/keywords/libs/variables.py' failed: SyntaxError: invalid syntax (variables.py, line 4)
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /Library/Python/2.7/site-packages/robot/libraries
+  /Library/Python/2.7/site-packages
+  /usr/local/bin
+  /Library/Python/2.7/site-packages/Pygments-1.6-py2.7.egg
+  /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python27.zip
+  /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7
+  /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-darwin
+  /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-mac
+  /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-mac/lib-scriptpackages
+  /System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python
+  /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-tk
+  /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-old
+  /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-dynload
+  /System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/PyObjC
+  /usr/local/lib/wxPython-2.9.5.0/lib/python2.7
+  .
+  /Users/matthewchickoree/Documents/workspace/humana-ui-automated-testing</msg>
+<msg timestamp="20141022 11:03:58.778" level="ERROR">Error in file '/Users/matthewchickoree/Documents/workspace/humana-ui-automated-testing/keywords/common_resources.robot': Importing test library 'SauceLabs' failed: ImportError: No module named requests
+Traceback (most recent call last):
+  File "./SauceLabs.py", line 2, in &lt;module&gt;
+PYTHONPATH:
+  /Library/Python/2.7/site-packages/robot/libraries
+  /Library/Python/2.7/site-packages
+  /usr/local/bin
+  /Library/Python/2.7/site-packages/Pygments-1.6-py2.7.egg
+  /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python27.zip
+  /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7
+  /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-darwin
+  /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-mac
+  /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-mac/lib-scriptpackages
+  /System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python
+  /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-tk
+  /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-old
+  /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-dynload
+  /System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/PyObjC
+  /usr/local/lib/wxPython-2.9.5.0/lib/python2.7
+  .
+  /Users/matthewchickoree/Documents/workspace/humana-ui-automated-testing</msg>
+</errors>
+</robot>
