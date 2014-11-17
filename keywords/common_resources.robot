@@ -21,27 +21,16 @@ ${TEST_STATUS}
 #       with the EM dashes in the app_variables.py
 
 ${HOME_PAGE_TITLE}          Medullan.com
-
 ${ABOUT_PAGE_TITLE}         About Us. — Medullan.com
-${ABOUT_SUFFIX}             /about
-
 ${CONTACT_PAGE_TITLE}       Contact. — Medullan.com
-${CONTACT_SUFFIX}           /contact
-
 ${IDEAS_PAGE_TITLE}         Ideas. — Medullan.com
-${IDEAS_SUFFIX}             /ideas
-
 ${PEOPLE_PAGE_TITLE}        People. — Medullan.com
-${PEOPLE_SUFFIX}            /people
-
 ${CAREERS_PAGE_TITLE}       Careers. — Medullan.com
-${CAREERS_SUFFIX}           /careers
-
 ${WORK_PAGE_TITLE}          Our Work. — Medullan.com
-${WORK_SUFFIX}              /work
-
 
 *** Keywords ***
+
+#   BEGIN GENERIC KEYWORDS
 Open test browser
     [Documentation]    Open Browser ${BROWSER} to ${HOST} for testing ${SUITE_NAME}
     Run keyword if  '${SAUCE_URL}' != ''
@@ -84,3 +73,124 @@ Teardown Browser
 
 Go to Host Page
   Go To   ${HOST}
+#   END GENERIC KEYWORDS
+
+#   BEGIN APP-SPECIFIC KEYWORDS
+I should see the top NAV bar
+  Element Should Be Visible   //*[@id="headerNav"]
+
+I should see the Medullan logo
+  Element Should Be Visible   //*[@id="siteTitleWrapper"]
+
+I should see the Footer
+  Element Should Be Visible   //*[@id="footer"]
+
+#   IMAGE NAVIGATION
+I navigate to the HOME page using the logo
+  Click Element    jquery=[id="siteTitleWrapper"] [href="/"]
+  Wait Until Keyword Succeeds   20s   1s    Title Should Be   ${HOME_PAGE_TITLE}
+
+I navigate to the Medullan's LinkedIn page using the logo in the footer
+  Click Element    jquery=[id="footer"] [href="https://www.linkedin.com/company/132349"]
+  Wait Until Keyword Succeeds   20s   1s    Title Should Be   ${HOME_PAGE_TITLE}
+
+I navigate to the Medullan's Twitter page using the logo in the footer
+  Click Element    jquery=[id="footer"] [href="https://twitter.com/medullan"]
+  Wait Until Keyword Succeeds   20s   1s    Title Should Be   ${HOME_PAGE_TITLE}
+
+#   FOOTER NAVIGATION
+I navigate to the WORK page using the link in the footer
+  Click Element    jquery=[id="footer"] [id="footer-navigation"] [href="/work"]
+  Wait Until Keyword Succeeds   20s   1s    Title Should Be   ${WORK_PAGE_TITLE}
+
+I navigate to the IDEAS page using the link in the footer
+  Click Element    jquery=[id="footer"] [id="footer-navigation"] [href="/ideas"]
+  Wait Until Keyword Succeeds   20s   1s    Title Should Be   ${IDEAS_PAGE_TITLE}
+
+I navigate to the PEOPLE page using the link in the footer
+  Click Element    jquery=[id="footer"] [id="footer-navigation"] [href="/people"]
+  Wait Until Keyword Succeeds   20s   1s    Title Should Be   ${PEOPLE_PAGE_TITLE}
+
+I navigate to the ABOUT page using the link in the footer
+  Click Element    jquery=[id="footer"] [id="footer-navigation"] [href="/about"]
+  Wait Until Keyword Succeeds   20s   1s    Title Should Be   ${ABOUT_PAGE_TITLE}
+
+I navigate to the CAREERS page using the link in the footer
+  Click Element    jquery=[id="footer"] [id="footer-navigation"] [href="/careers"]
+  Wait Until Keyword Succeeds   20s   1s    Title Should Be   ${CAREERS_PAGE_TITLE}
+
+I navigate to the CONTACT page using the link in the footer
+  Click Element    jquery=[id="footer"] [id="footer-navigation"] [href="/contact"]
+  Wait Until Keyword Succeeds   20s   1s    Title Should Be   ${CONTACT_PAGE_TITLE}
+
+#   HEADER NAVIGATION
+I navigate to the WORK page using the link in the header
+  Click Element    jquery=[id="headerNav"] [id="main-navigation"] [href="/work/"]
+  Wait Until Keyword Succeeds   20s   1s    Title Should Be   ${WORK_PAGE_TITLE}
+
+I navigate to the IDEAS page using the link in the header
+  Click Element    jquery=[id="headerNav"] [id="main-navigation"] [href="/ideas/"]
+  Wait Until Keyword Succeeds   20s   1s    Title Should Be   ${IDEAS_PAGE_TITLE}
+
+I navigate to the PEOPLE page using the link in the header
+  Click Element    jquery=[id="headerNav"] [id="main-navigation"] [href="/people-root/"]
+  Wait Until Keyword Succeeds   20s   1s    Title Should Be   ${PEOPLE_PAGE_TITLE}
+
+I navigate to the CAREERS page using the link in the header
+  Mouse Over    jquery=[id="headerNav"] [id="main-navigation"] [href="/people-root/"]
+  Click Element    jquery=[id="headerNav"] [id="main-navigation"] [href="/careers/"]
+  Wait Until Keyword Succeeds   20s   1s    Title Should Be   ${CAREERS_PAGE_TITLE}
+
+I navigate to the ABOUT page using the link in the header
+  Click Element    jquery=[id="headerNav"] [id="main-navigation"] [href="/about/"]
+  Wait Until Keyword Succeeds   20s   1s    Title Should Be   ${ABOUT_PAGE_TITLE}
+
+I navigate to the CONTACT page using the link in the header
+  Click Element    jquery=[id="headerNav"] [id="main-navigation"] [href="/contact/"]
+  Wait Until Keyword Succeeds   20s   1s    Title Should Be   ${CONTACT_PAGE_TITLE}
+
+#   SEEING PAGES
+I should see the WORK page
+  Title Should Be       ${WORK_PAGE_TITLE}
+  Capture Page Screenshot   screenshots/home/work/${TEST_NAME}_work_page.png
+  Run keyword if  '${APPLITOOLS_KEY}' != ''
+  ...   Check Eyes Window     ${TEST_NAME}_work_page    False
+
+I should see the IDEAS page
+  Title Should Be       ${IDEAS_PAGE_TITLE}
+  Capture Page Screenshot   screenshots/home/ideas/${TEST_NAME}_ideas_page.png
+  Run keyword if  '${APPLITOOLS_KEY}' != ''
+  ...   Check Eyes Window     ${TEST_NAME}_ideas_page    False
+
+I should see the PEOPLE page
+  Title Should Be       ${PEOPLE_PAGE_TITLE}
+  Capture Page Screenshot   screenshots/home/people/${TEST_NAME}_people_page.png
+  Run keyword if  '${APPLITOOLS_KEY}' != ''
+  ...   Check Eyes Window     ${TEST_NAME}_people_page    False
+
+I should see the CAREERS page
+  Title Should Be       ${CAREERS_PAGE_TITLE}
+  Capture Page Screenshot   screenshots/home/people/careers/${TEST_NAME}_careers_page.png
+  Run keyword if  '${APPLITOOLS_KEY}' != ''
+  ...   Check Eyes Window     ${TEST_NAME}_careers_page    False
+
+I should see the ABOUT page
+  Title Should Be       ${ABOUT_PAGE_TITLE}
+  Capture Page Screenshot   screenshots/home/about/${TEST_NAME}_about_page.png
+  Run keyword if  '${APPLITOOLS_KEY}' != ''
+  ...   Check Eyes Window     ${TEST_NAME}_about_page    False
+
+I should see the CONTACT page
+  Title Should Be       ${CONTACT_PAGE_TITLE}
+  Capture Page Screenshot   screenshots/home/contact/${TEST_NAME}_contact_page.png
+  Run keyword if  '${APPLITOOLS_KEY}' != ''
+  ...   Check Eyes Window     ${TEST_NAME}_contact_page    False
+
+I should see the HOME page
+  Title Should Be       ${HOME_PAGE_TITLE}
+  Capture Page Screenshot   screenshots/home/${TEST_NAME}_home_page.png
+  Run keyword if  '${APPLITOOLS_KEY}' != ''
+  ...   Check Eyes Window     ${TEST_NAME}_home_page    False
+
+
+#   END APP-SPECIFIC KEYWORDS
