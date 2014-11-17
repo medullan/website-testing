@@ -13,8 +13,5 @@ I navigate to the home page
   Go To   ${HOST}
   Wait Until Keyword Succeeds   20s   1s    Title Should Be   ${HOME_PAGE_TITLE}
 
-I should see the home page
-  Title Should Be       ${HOME_PAGE_TITLE}
-  Capture Page Screenshot   screenshots/home/home_page.png
-  Run keyword if  '${APPLITOOLS_KEY}' != ''
-  ...   Check Eyes Window     home_page    False
+I am on the home page
+  I navigate to the home page

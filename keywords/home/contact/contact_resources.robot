@@ -13,8 +13,5 @@ I navigate to the contact page
   Go To   ${HOST}${CONTACT_SUFFIX}
   Wait Until Keyword Succeeds   20s   1s    Title Should Be   ${CONTACT_PAGE_TITLE}
 
-I should see the contact page
-  Title Should Be       ${CONTACT_PAGE_TITLE}
-  Capture Page Screenshot   screenshots/home/contact/contact_page.png
-  Run keyword if  '${APPLITOOLS_KEY}' != ''
-  ...   Check Eyes Window     contact_page    False
+I am on the contact page
+  I navigate to the contact page

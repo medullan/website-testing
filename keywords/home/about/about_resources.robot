@@ -13,8 +13,5 @@ I navigate to the about page
   Go To   ${HOST}${ABOUT_SUFFIX}
   Wait Until Keyword Succeeds   20s   1s    Title Should Be   ${ABOUT_PAGE_TITLE}
 
-I should see the about page
-  Title Should Be       ${ABOUT_PAGE_TITLE}
-  Capture Page Screenshot   screenshots/home/about/about_page.png
-  Run keyword if  '${APPLITOOLS_KEY}' != ''
-  ...   Check Eyes Window     about_page    False
+I am on the about page
+  I navigate to the about page

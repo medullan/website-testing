@@ -13,8 +13,5 @@ I navigate to the people page
   Go To   ${HOST}${PEOPLE_SUFFIX}
   Wait Until Keyword Succeeds   20s   1s    Title Should Be   ${PEOPLE_PAGE_TITLE}
 
-I should see the people page
-  Title Should Be       ${PEOPLE_PAGE_TITLE}
-  Capture Page Screenshot   screenshots/home/people/people_page.png
-  Run keyword if  '${APPLITOOLS_KEY}' != ''
-  ...   Check Eyes Window     people_page    False
+I am on the people page
+  I navigate to the people page

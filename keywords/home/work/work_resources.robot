@@ -12,8 +12,5 @@ I navigate to the work page
   Go To   ${HOST}${WORK_SUFFIX}
   Wait Until Keyword Succeeds   20s   1s    Title Should Be   ${WORK_PAGE_TITLE}
 
-I should see the work page
-  Title Should Be       ${WORK_PAGE_TITLE}
-  Capture Page Screenshot   screenshots/home/work/work_page.png
-  Run keyword if  '${APPLITOOLS_KEY}' != ''
-  ...   Check Eyes Window     work_page    False
+I am on the work page
+  I navigate to the work page
