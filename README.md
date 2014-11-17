@@ -42,12 +42,49 @@ This repository contains the robot tests for visual and functional testing of Me
   </code>
 </pre>
 
-######  For Development Testing without SauceLabs and without Applitools
-<pre>
-  <code>
-    pybot --outputdir robot_test_results --variable HOST:'http://h3ju.squarespace.com/' --variable APPLITOOLS_KEY:'s98X9TqoLDyzhYGaimes7MRXsLeupwG68xPReJ6RPhnU110' --variable APPLITOOLS_APP_NAME:'Medullan' --argumentfile home_tests.txt
-  </code>
-</pre>
+
+#####    List of OS/browser to test against:    #####
+
+######    MAC     ######
+SAUCE_CAPABILITIES:'platform:OS X 10.9,browserName:firefox'
+SAUCE_CAPABILITIES:'platform:OS X 10.9,browserName:chrome'
+SAUCE_CAPABILITIES:'platform:OS X 10.9,browserName:safari'
+
+######    Windows 8.1     ######
+SAUCE_CAPABILITIES:'platform:Windows 8.1,browserName:firefox'
+SAUCE_CAPABILITIES:'platform:Windows 8.1,browserName:chrome'
+SAUCE_CAPABILITIES:'platform:Windows 8.1,browserName:internet explorer,version:11'
+
+######    Windows 8     ######
+SAUCE_CAPABILITIES:'platform:Windows 8,browserName:firefox'
+SAUCE_CAPABILITIES:'platform:Windows 8,browserName:chrome'
+SAUCE_CAPABILITIES:'platform:Windows 8,browserName:internet explorer,version:10'
+
+######    Windows 7     ######
+SAUCE_CAPABILITIES:'platform:Windows 7,browserName:firefox'
+SAUCE_CAPABILITIES:'platform:Windows 7,browserName:chrome'
+SAUCE_CAPABILITIES:'platform:Windows 7,browserName:internet explorer,version:11'
+SAUCE_CAPABILITIES:'platform:Windows 7,browserName:internet explorer,version:10'
+SAUCE_CAPABILITIES:'platform:Windows 7,browserName:internet explorer,version:9'
+SAUCE_CAPABILITIES:'platform:Windows 7,browserName:internet explorer,version:8'
+
+######    Windows XP     ######
+SAUCE_CAPABILITIES:'platform:Windows XP,browserName:firefox'
+SAUCE_CAPABILITIES:'platform:Windows XP,browserName:chrome'
+SAUCE_CAPABILITIES:'platform:Windows XP,browserName:internet explorer,version:8'
+SAUCE_CAPABILITIES:'platform:Windows XP,browserName:internet explorer,version:7'
+SAUCE_CAPABILITIES:'platform:Windows XP,browserName:internet explorer,version:6'
+
+######    Linux     ######
+SAUCE_CAPABILITIES:'platform:Windows 8,browserName:firefox'
+SAUCE_CAPABILITIES:'platform:Windows 8,browserName:chrome'
+SAUCE_CAPABILITIES:'platform:Windows 8,browserName:opera'
+
+
+pybot --outputdir robot_test_results --variable HOST:'http://h3ju.squarespace.com/' --variable SAUCE_URL:'http://webmaster-medullan:edd0afbf-d682-40a3-b747-6fe384893215@ondemand.saucelabs.com:80/wd/hub' --variable SAUCE_CAPABILITIES:'platform:Windows XP,browserName:internet explorer' --argumentfile full_suite.txt
+
+
+pybot --outputdir robot_test_results -- --variable SAUCE_CAPABILITIES:'platform:linux,browserName:android,deviceName:Google Nexus 7 HD Emulator,device-orientation:portrait' --argumentfile full_suite.txt
 
 #####    List of variables that can be used in the robot command:
 - ${HOST} <p>`The site to be tested`

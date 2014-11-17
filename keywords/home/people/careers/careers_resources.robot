@@ -13,8 +13,5 @@ I navigate to the careers page
   Go To   ${HOST}${CAREERS_SUFFIX}
   Wait Until Keyword Succeeds   20s   1s    Title Should Be   ${CAREERS_PAGE_TITLE}
 
-I should see the careers page
-  Title Should Be       ${CAREERS_PAGE_TITLE}
-  Capture Page Screenshot   screenshots/home/people/careers/careers_page.png
-  Run keyword if  '${APPLITOOLS_KEY}' != ''
-  ...   Check Eyes Window     careers_page    False
+I am on the careers page
+  I navigate to the careers page

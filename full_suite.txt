@@ -1,6 +1,7 @@
 tests/home/home_test.robot
-tests/home/ideas/
-tests/home/people/
-tests/home/work/
-tests/home/about/
-tests/home/contact/
+tests/home/ideas/ideas_test.robot
+tests/home/people/careers/careers_test.robot
+tests/home/people/people_test.robot
+tests/home/work/work_test.robot
+tests/home/about/about_test.robot
+tests/home/contact/contact_test.robot
