@@ -77,8 +77,14 @@ I can access the ABOUT page from the footer on the WORK page
   Given I am on the work page
   When I navigate to the ABOUT page using the link in the footer
   Then I should see the ABOUT page
-  
+
 I can access the CONTACT page from the footer on the WORK page
   Given I am on the work page
   When I navigate to the CONTACT page using the link in the footer
   Then I should see the CONTACT page
+
+I can see the tooltips when I hover over thingies
+  [Tags]    not-working
+  Given I am on the work page
+  When Mouse Over   //*[@id="${ABBVIE_LOGO_ID}"]
+  Then Element Should Be Visible    jquery=[role="tooltip"] [class="ui-tooltip-content"]

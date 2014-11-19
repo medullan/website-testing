@@ -27,6 +27,8 @@ ${IDEAS_PAGE_TITLE}         Ideas. — Medullan.com
 ${PEOPLE_PAGE_TITLE}        People. — Medullan.com
 ${CAREERS_PAGE_TITLE}       Careers. — Medullan.com
 ${WORK_PAGE_TITLE}          Our Work. — Medullan.com
+${TWITTER_TITLE}            Medullan, Inc. (@medullan) | Twitter
+${LINKEDIN_TITLE}           Medullan | LinkedIn
 
 *** Keywords ***
 
@@ -92,11 +94,11 @@ I navigate to the HOME page using the logo
 
 I navigate to the Medullan's LinkedIn page using the logo in the footer
   Click Element    jquery=[id="footer"] [href="https://www.linkedin.com/company/132349"]
-  Wait Until Keyword Succeeds   20s   1s    Title Should Be   ${HOME_PAGE_TITLE}
+  Wait Until Keyword Succeeds   10s   1s    Select Window   title=${LINKEDIN_TITLE}
 
 I navigate to the Medullan's Twitter page using the logo in the footer
   Click Element    jquery=[id="footer"] [href="https://twitter.com/medullan"]
-  Wait Until Keyword Succeeds   20s   1s    Title Should Be   ${HOME_PAGE_TITLE}
+  Wait Until Keyword Succeeds   10s   1s    Select Window   title=${TWITTER_TITLE}
 
 #   FOOTER NAVIGATION
 I navigate to the WORK page using the link in the footer
@@ -191,6 +193,18 @@ I should see the HOME page
   Capture Page Screenshot   screenshots/home/${TEST_NAME}_home_page.png
   Run keyword if  '${APPLITOOLS_KEY}' != ''
   ...   Check Eyes Window     ${TEST_NAME}_home_page    False
+
+I should see Medullan's Twitter page in a new tab
+  Title Should Be       ${TWITTER_TITLE}
+  Capture Page Screenshot   screenshots/external/${TEST_NAME}_twitter.png
+  Run keyword if  '${APPLITOOLS_KEY}' != ''
+  ...   Check Eyes Window     ${TEST_NAME}_twitter    False
+
+I should see Medullan's LinkedIn page in a new tab
+  Title Should Be       ${LINKEDIN_TITLE}
+  Capture Page Screenshot   screenshots/external/${TEST_NAME}_linkedin.png
+  Run keyword if  '${APPLITOOLS_KEY}' != ''
+  ...   Check Eyes Window     ${TEST_NAME}_linkedin    False
 
 
 #   END APP-SPECIFIC KEYWORDS
