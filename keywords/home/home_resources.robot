@@ -41,17 +41,40 @@ I click the View More link on the HOME page
   Wait Until Keyword Succeeds   20s   1s    Title Should Be   ${IDEAS_PAGE_TITLE}
 
 I click on the left image of the Ideas Summary
-  Click Element   jquery=[id$="${IDEAS_SUMMARY_LEFT}" a:eq(1)]
-  Wait Until Keyword Succeeds   20s   1s    Title Should Be   ${WORK_PAGE_TITLE}
+  ${get_item_summary_page} =
+    ...   Get Element Attribute    jquery=[id$="${IDEAS_SUMMARY_LEFT}"] a@data-title
+  Set Test Variable   ${ITEM_SUMMARY_PAGE}    ${get_item_summary_page}
+  Click Element   jquery=[id$="${IDEAS_SUMMARY_LEFT}"] a
+  Wait Until Keyword Succeeds   20s   1s    Element Text Should Be    //*[@class="blog-title"]   ${ITEM_SUMMARY_PAGE}
 
 I click on the middle image of the Ideas Summary
-  Click Element   jquery=[id$="${IDEAS_SUMMARY_MID}"]
-  Wait Until Keyword Succeeds   20s   1s    Title Should Be   ${WORK_PAGE_TITLE}
+  ${get_item_summary_page} =
+    ...   Get Element Attribute    jquery=[id$="${IDEAS_SUMMARY_MID}"] a@data-title
+  Set Test Variable   ${ITEM_SUMMARY_PAGE}    ${get_item_summary_page}
+  Click Element   jquery=[id$="${IDEAS_SUMMARY_MID}"] a
+  Wait Until Keyword Succeeds   20s   1s    Element Text Should Be    //*[@class="blog-title"]   ${ITEM_SUMMARY_PAGE}
 
 I click on the right image of the Ideas Summary
-  Click Element   jquery=[id$="${IDEAS_SUMMARY_RIGHT}"]
-  Wait Until Keyword Succeeds   20s   1s    Title Should Be   ${WORK_PAGE_TITLE}
+  ${get_item_summary_page} =
+  ...   Get Element Attribute    jquery=[id$="${IDEAS_SUMMARY_RIGHT}"] a@data-title
+  Set Test Variable   ${ITEM_SUMMARY_PAGE}    ${get_item_summary_page}
+  Click Element   jquery=[id$="${IDEAS_SUMMARY_RIGHT}"] a
+  Wait Until Keyword Succeeds   20s   1s    Element Text Should Be    //*[@class="blog-title"]   ${ITEM_SUMMARY_PAGE}
 
-I should see the page open
-  [Arguments]   ${ITEM_SUMMARY_PAGE}
-  Wait Until Keyword Succeeds   20s   1s    Title Should Be   ${ITEM_SUMMARY_PAGE}
+I should see the left blog page open
+  Wait Until Keyword Succeeds   20s   1s    Element Text Should Be    //*[@class="blog-title"]   ${ITEM_SUMMARY_PAGE}
+  Capture Page Screenshot   screenshots/home/${TEST_NAME}_left_blog_page.png
+  Run keyword if  '${APPLITOOLS_KEY}' != ''
+  ...   Check Eyes Window     ${TEST_NAME}_left_blog_page    False
+
+I should see the middle blog page open
+  Wait Until Keyword Succeeds   20s   1s    Element Text Should Be    //*[@class="blog-title"]   ${ITEM_SUMMARY_PAGE}
+  Capture Page Screenshot   screenshots/home/${TEST_NAME}_middle_blog_page.png
+  Run keyword if  '${APPLITOOLS_KEY}' != ''
+  ...   Check Eyes Window     ${TEST_NAME}_middle_blog_page    False
+
+I should see the right blog page open
+  Wait Until Keyword Succeeds   20s   1s    Element Text Should Be    //*[@class="blog-title"]   ${ITEM_SUMMARY_PAGE}
+  Capture Page Screenshot   screenshots/home/${TEST_NAME}_right_blog_page.png
+  Run keyword if  '${APPLITOOLS_KEY}' != ''
+  ...   Check Eyes Window     ${TEST_NAME}_right_blog_page    False

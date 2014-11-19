@@ -86,5 +86,35 @@ I can access the CONTACT page from the footer on the WORK page
 I can see the tooltips when I hover over thingies
   [Tags]    not-working
   Given I am on the work page
-  When Mouse Over   //*[@id="${ABBVIE_LOGO_ID}"]
+  When Mouse Over   jquery=[id$="${ABBVIE_LOGO_ID}"]
+  Then Element Should Be Visible    jquery=[role="tooltip"] [class="ui-tooltip-content"]
+
+I can see the tooltips when I hover over thingies
+  [Tags]    not-working
+  Given I am on the work page
+  When Mouse Over   jquery=[id$="_509"]
+  Then Element Should Be Visible    jquery=[role="tooltip"] [class="ui-tooltip-content"]
+
+I can see the tooltips when I hover over thingies
+  [Tags]    not-working
+  Given I am on the work page
+  When Mouse Over   jquery=[id$="_508"]
+  Then Element Should Be Visible    jquery=[role="tooltip"] [class="ui-tooltip-content"]
+
+I can see the tooltips when I hover over thingies
+  [Tags]    not-working
+  Given I am on the work page
+  When Mouse Over   jquery=[id$="_507"]
+  Then Element Should Be Visible    jquery=[role="tooltip"] [class="ui-tooltip-content"]
+
+I can see the tooltips when I hover over thingies
+  [Tags]    not-working
+  Given I am on the work page
+  When Mouse Over   jquery=[id$="_506"]
+  Then Element Should Be Visible    jquery=[role="tooltip"] [class="ui-tooltip-content"]
+
+I can see the tooltips when I hover over thingies
+  [Tags]    not-working
+  Given I am on the work page
+  When Mouse Over   jquery=[id$="_506"] img
   Then Element Should Be Visible    jquery=[role="tooltip"] [class="ui-tooltip-content"]
