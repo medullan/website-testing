@@ -28,28 +28,25 @@ I can go to the IDEAS page when I click the View More link in the Ideas section 
   Then I should see the IDEAS page
 
 I can go to the CONTACT page when I click the Get in Touch box on the HOME page
-  [Tags]    ignore    not-developed-yet
+  [Tags]    ignore
   Given I am on the home page
   When I click the Get in Touch box on the HOME page
   Then I should see the CONTACT page
 
 I can open the left most-recent Ideas Summary links
-  [Tags]    testing   ignore
   Given I am on the home page
   When I click on the left image of the Ideas Summary
-  Then I should see the page open   ${IDEAS_SUMMARY_LEFT}
+  Then I should see the left blog page open
 
 I can open the middle most-recent Ideas Summary links
-[Tags]    testing   ignore
   Given I am on the home page
   When I click on the middle image of the Ideas Summary
-  Then I should see the page open   ${ITEM_SUMMARY_PAGE}
+  Then I should see the middle blog page open
 
 I can open the right most-recent Ideas Summary links
-[Tags]    testing   ignore
   Given I am on the home page
   When I click on the right image of the Ideas Summary
-  Then I should see the page open   ${ITEM_SUMMARY_PAGE}
+  Then I should see the right blog page open
 
 #   COMMON TESTS
 I can see the COMMON ELEMENTS on the HOME page

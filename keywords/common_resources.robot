@@ -26,7 +26,7 @@ ${CONTACT_PAGE_TITLE}       Contact. — Medullan.com
 ${IDEAS_PAGE_TITLE}         Ideas. — Medullan.com
 ${PEOPLE_PAGE_TITLE}        People. — Medullan.com
 ${CAREERS_PAGE_TITLE}       Careers. — Medullan.com
-${WORK_PAGE_TITLE}          Our Work. — Medullan.com
+${WORK_PAGE_TITLE}          Work. — Medullan.com
 ${TWITTER_TITLE}            Medullan, Inc. (@medullan) | Twitter
 ${LINKEDIN_TITLE}           Medullan | LinkedIn
 
