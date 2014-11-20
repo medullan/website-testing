@@ -97,3 +97,39 @@ pybot --outputdir robot_test_results -- --variable SAUCE_CAPABILITIES:'platform:
 - ${APPLITOOLS_MATCHLEVEL}  <p>`The matchlevel on AppliTools, values are: STRICT, LAYOUT, CONTENT. The default is LAYOUT`
 - ${APPLITOOLS_EYESLOG}  <p>`Set True to use and False to not use the eyes-log`
 - ${APPLITOOLS_DEBUGLOG}  <p>`Set True to use and False to not use the http-debug-log`
+
+
+
+
+Testing:
+
+MAC
+FF
+pybot --outputdir robot_test_results --variable HOST:'http://medullan.com' --exclude ignore --argumentfile full_suite.txt
+
+CHROME
+pybot --outputdir robot_test_results --variable HOST:'http://medullan.com' --variable APPLITOOLS_KEY:'s98X9TqoLDyzhYGaimes7MRXsLeupwG68xPReJ6RPhnU110' --variable APPLITOOLS_APP_NAME:'Medullan' --variable SAUCE_URL:'http://webmaster-medullan:edd0afbf-d682-40a3-b747-6fe384893215@ondemand.saucelabs.com:80/wd/hub' --variable SAUCE_CAPABILITIES:'platform:OS X 10.9,browserName:chrome' --exclude ignore --argumentfile full_suite.txt
+
+SAFARI
+pybot --outputdir robot_test_results --variable HOST:'http://medullan.com' --variable APPLITOOLS_KEY:'s98X9TqoLDyzhYGaimes7MRXsLeupwG68xPReJ6RPhnU110' --variable APPLITOOLS_APP_NAME:'Medullan' --variable SAUCE_URL:'http://webmaster-medullan:edd0afbf-d682-40a3-b747-6fe384893215@ondemand.saucelabs.com:80/wd/hub' --variable SAUCE_CAPABILITIES:'platform:OS X 10.9,browserName:safari' --exclude ignore --argumentfile full_suite.txt
+
+
+WINDOWS 8.1
+FF
+pybot --outputdir robot_test_results --variable HOST:'http://medullan.com' --variable APPLITOOLS_KEY:'s98X9TqoLDyzhYGaimes7MRXsLeupwG68xPReJ6RPhnU110' --variable APPLITOOLS_APP_NAME:'Medullan' --variable SAUCE_URL:'http://webmaster-medullan:edd0afbf-d682-40a3-b747-6fe384893215@ondemand.saucelabs.com:80/wd/hub' --variable SAUCE_CAPABILITIES:'platform:Windows 8.1,browserName:firefox' --exclude ignore --argumentfile full_suite.txt
+
+CHROME
+pybot --outputdir robot_test_results --variable HOST:'http://medullan.com' --variable APPLITOOLS_KEY:'s98X9TqoLDyzhYGaimes7MRXsLeupwG68xPReJ6RPhnU110' --variable APPLITOOLS_APP_NAME:'Medullan' --variable SAUCE_URL:'http://webmaster-medullan:edd0afbf-d682-40a3-b747-6fe384893215@ondemand.saucelabs.com:80/wd/hub' --variable SAUCE_CAPABILITIES:'platform:Windows 8.1,browserName:chrome' --exclude ignore --argumentfile full_suite.txt
+
+IE
+pybot --outputdir robot_test_results --variable HOST:'http://medullan.com' --variable APPLITOOLS_KEY:'s98X9TqoLDyzhYGaimes7MRXsLeupwG68xPReJ6RPhnU110' --variable APPLITOOLS_APP_NAME:'Medullan' --variable SAUCE_URL:'http://webmaster-medullan:edd0afbf-d682-40a3-b747-6fe384893215@ondemand.saucelabs.com:80/wd/hub' --variable SAUCE_CAPABILITIES:'platform:Windows 8.1,browserName:internet explorer,version:11' --exclude ignore --argumentfile full_suite.txt
+
+WINDOWS 8
+FF
+pybot --outputdir robot_test_results --variable HOST:'http://medullan.com' --variable APPLITOOLS_KEY:'s98X9TqoLDyzhYGaimes7MRXsLeupwG68xPReJ6RPhnU110' --variable APPLITOOLS_APP_NAME:'Medullan' --variable SAUCE_URL:'http://webmaster-medullan:edd0afbf-d682-40a3-b747-6fe384893215@ondemand.saucelabs.com:80/wd/hub' --variable SAUCE_CAPABILITIES:'platform:Windows 8,browserName:firefox' --exclude ignore --argumentfile full_suite.txt
+
+CHROME
+pybot --outputdir robot_test_results --variable HOST:'http://medullan.com' --variable APPLITOOLS_KEY:'s98X9TqoLDyzhYGaimes7MRXsLeupwG68xPReJ6RPhnU110' --variable APPLITOOLS_APP_NAME:'Medullan' --variable SAUCE_URL:'http://webmaster-medullan:edd0afbf-d682-40a3-b747-6fe384893215@ondemand.saucelabs.com:80/wd/hub' --variable SAUCE_CAPABILITIES:'platform:Windows 8,browserName:chrome' --exclude ignore --argumentfile full_suite.txt
+
+IE
+pybot --outputdir robot_test_results --variable HOST:'http://medullan.com' --variable APPLITOOLS_KEY:'s98X9TqoLDyzhYGaimes7MRXsLeupwG68xPReJ6RPhnU110' --variable APPLITOOLS_APP_NAME:'Medullan' --variable SAUCE_URL:'http://webmaster-medullan:edd0afbf-d682-40a3-b747-6fe384893215@ondemand.saucelabs.com:80/wd/hub' --variable SAUCE_CAPABILITIES:'platform:Windows 8,browserName:internet explorer,version:10' --exclude ignore --argumentfile full_suite.txt

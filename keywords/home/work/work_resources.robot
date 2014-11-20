@@ -14,3 +14,18 @@ I navigate to the work page
 
 I am on the work page
   I navigate to the work page
+
+Client Logo Text
+  [Arguments]   ${CLIENT_LOGO_ID}
+
+I hover over
+  [Arguments]   ${CLIENT_LOGO_ID}
+  Mouse Over   jquery=[id$="${CLIENT_LOGO_ID}"] img
+
+I should see the tooltip for
+  [Arguments]   ${CLIENT_LOGO_ID}
+  Element Should Be Visible   jquery=[role="tooltip"] [class="ui-tooltip-content"]
+  Capture Page Screenshot   screenshots/home/work/${TEST_NAME}-${SAUCE_CAPABILITIES}_tooltip.png
+  Run keyword if  '${APPLITOOLS_KEY}' != ''
+  ...   Check Eyes Window     ${TEST_NAME}-${SAUCE_CAPABILITIES}tooltip    False
+#  Element Text Should Be      jquery=[role="tooltip"] [class="ui-tooltip-content"]    Client Logo Text    ${CLIENT_LOGO_ID}

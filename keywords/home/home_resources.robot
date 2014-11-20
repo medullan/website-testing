@@ -63,18 +63,18 @@ I click on the right image of the Ideas Summary
 
 I should see the left blog page open
   Wait Until Keyword Succeeds   20s   1s    Element Text Should Be    //*[@class="blog-title"]   ${ITEM_SUMMARY_PAGE}
-  Capture Page Screenshot   screenshots/home/${TEST_NAME}_left_blog_page.png
+  Capture Page Screenshot   screenshots/home/${TEST_NAME}-${SAUCE_CAPABILITIES}_left_blog_page.png
   Run keyword if  '${APPLITOOLS_KEY}' != ''
-  ...   Check Eyes Window     ${TEST_NAME}_left_blog_page    False
+  ...   Check Eyes Window     ${TEST_NAME}-${SAUCE_CAPABILITIES}_left_blog_page    False
 
 I should see the middle blog page open
   Wait Until Keyword Succeeds   20s   1s    Element Text Should Be    //*[@class="blog-title"]   ${ITEM_SUMMARY_PAGE}
-  Capture Page Screenshot   screenshots/home/${TEST_NAME}_middle_blog_page.png
+  Capture Page Screenshot   screenshots/home/${TEST_NAME}-${SAUCE_CAPABILITIES}_middle_blog_page.png
   Run keyword if  '${APPLITOOLS_KEY}' != ''
-  ...   Check Eyes Window     ${TEST_NAME}_middle_blog_page    False
+  ...   Check Eyes Window     ${TEST_NAME}-${SAUCE_CAPABILITIES}_middle_blog_page    False
 
 I should see the right blog page open
   Wait Until Keyword Succeeds   20s   1s    Element Text Should Be    //*[@class="blog-title"]   ${ITEM_SUMMARY_PAGE}
-  Capture Page Screenshot   screenshots/home/${TEST_NAME}_right_blog_page.png
+  Capture Page Screenshot   screenshots/home/${TEST_NAME}-${SAUCE_CAPABILITIES}_right_blog_page.png
   Run keyword if  '${APPLITOOLS_KEY}' != ''
-  ...   Check Eyes Window     ${TEST_NAME}_right_blog_page    False
+  ...   Check Eyes Window     ${TEST_NAME}-${SAUCE_CAPABILITIES}_right_blog_page    False
