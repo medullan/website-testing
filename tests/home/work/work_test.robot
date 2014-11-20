@@ -83,8 +83,75 @@ I can access the CONTACT page from the footer on the WORK page
   When I navigate to the CONTACT page using the link in the footer
   Then I should see the CONTACT page
 
-I can see the tooltips when I hover over thingies
-  [Tags]    not-working
+I can see the tooltips when I hover over client logo for ABBVIE
+  [Tags]    testing
   Given I am on the work page
-  When Mouse Over   //*[@id="${ABBVIE_LOGO_ID}"]
-  Then Element Should Be Visible    jquery=[role="tooltip"] [class="ui-tooltip-content"]
+  When I hover over   ${ABBVIE_LOGO_ID}
+  Then I should see the tooltip for   ${ABBVIE_LOGO_ID}
+
+I can see the tooltips when I hover over client logo for AETNA
+  [Tags]    testing
+  Given I am on the work page
+  When I hover over   ${AETNA_LOGO_ID}
+  Then I should see the tooltip for   ${AETNA_LOGO_ID}
+
+I can see the tooltips when I hover over client logo for BCBSA
+  [Tags]    testing
+  Given I am on the work page
+  When I hover over   ${BCBS_LOGO_ID}
+  Then I should see the tooltip for   ${BCBS_LOGO_ID}
+
+I can see the tooltips when I hover over client logo for FOUNDATION MED
+  [Tags]    testing
+  Given I am on the work page
+  When I hover over   ${FOUNDATION_MED_LOGO_ID}
+  Then I should see the tooltip for   ${FOUNDATION_MED_LOGO_ID}
+
+I can see the tooltips when I hover over client logo for HUMANA
+  [Tags]    testing
+  Given I am on the work page
+  When I hover over   ${HUMANA_LOGO_ID}
+  Then I should see the tooltip for   ${HUMANA_LOGO_ID}
+
+I can see the tooltips when I hover over client logo for MEDECISION
+  [Tags]    testing
+  Given I am on the work page
+  When I hover over   ${MEDECISION_LOGO_ID}
+  Then I should see the tooltip for   ${MEDECISION_LOGO_ID}
+
+I can see the tooltips when I hover over client logo for MGH
+  [Tags]    testing
+  Given I am on the work page
+  When I hover over   ${MGH_LOGO_ID}
+  Then I should see the tooltip for   ${MGH_LOGO_ID}
+
+I can see the tooltips when I hover over client logo for OPTUM
+  [Tags]    testing
+  Given I am on the work page
+  When I hover over   ${OPTUM_LOGO_ID}
+  Then I should see the tooltip for   ${OPTUM_LOGO_ID}
+
+I can see the tooltips when I hover over client logo for RED HEALTH
+  [Tags]    testing
+  Given I am on the work page
+  When I hover over   ${RED_HEALTH_LOGO_ID}
+  Then I should see the tooltip for   ${RED_HEALTH_LOGO_ID}
+
+I can see the tooltips when I hover over client logo for TUFTS
+  [Tags]    testing
+  Given I am on the work page
+  When I hover over   ${TUFTS_LOGO_ID}
+  Then I should see the tooltip for   ${TUFTS_LOGO_ID}
+
+I can see the tooltips when I hover over client logo for VERIZON
+  [Tags]    testing
+  Given I am on the work page
+  When I hover over   ${VERIZON_LOGO_ID}
+  Then I should see the tooltip for   ${VERIZON_LOGO_ID}
+
+I can see the tooltips when I hover over client logo for YOU
+  [Tags]    ignore
+  #   No tooltip for this. Clickable link
+  Given I am on the work page
+  When I hover over   ${YOU_LOGO_ID}
+  Then I should see the tooltip for   ${YOU_LOGO_ID}

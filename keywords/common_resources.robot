@@ -20,13 +20,13 @@ ${TEST_STATUS}
 #       These Variables are used here to bypass the UTF-8 encoding issue
 #       with the EM dashes in the app_variables.py
 
-${HOME_PAGE_TITLE}          Medullan.com
-${ABOUT_PAGE_TITLE}         About Us. — Medullan.com
-${CONTACT_PAGE_TITLE}       Contact. — Medullan.com
-${IDEAS_PAGE_TITLE}         Ideas. — Medullan.com
-${PEOPLE_PAGE_TITLE}        People. — Medullan.com
-${CAREERS_PAGE_TITLE}       Careers. — Medullan.com
-${WORK_PAGE_TITLE}          Our Work. — Medullan.com
+${HOME_PAGE_TITLE}          Digital Health Consultancy | Medullan
+${ABOUT_PAGE_TITLE}         About Us. — Digital Health Consultancy | Medullan
+${CONTACT_PAGE_TITLE}       Contact. — Digital Health Consultancy | Medullan
+${IDEAS_PAGE_TITLE}         Ideas. — Digital Health Consultancy | Medullan
+${PEOPLE_PAGE_TITLE}        People. — Digital Health Consultancy | Medullan
+${CAREERS_PAGE_TITLE}       Careers. — Digital Health Consultancy | Medullan
+${WORK_PAGE_TITLE}          Work. — Digital Health Consultancy | Medullan
 ${TWITTER_TITLE}            Medullan, Inc. (@medullan) | Twitter
 ${LINKEDIN_TITLE}           Medullan | LinkedIn
 
@@ -154,57 +154,57 @@ I navigate to the CONTACT page using the link in the header
 #   SEEING PAGES
 I should see the WORK page
   Title Should Be       ${WORK_PAGE_TITLE}
-  Capture Page Screenshot   screenshots/home/work/${TEST_NAME}_work_page.png
+  Capture Page Screenshot   screenshots/home/work/${TEST_NAME}-${SAUCE_CAPABILITIES}_work_page.png
   Run keyword if  '${APPLITOOLS_KEY}' != ''
-  ...   Check Eyes Window     ${TEST_NAME}_work_page    False
+  ...   Check Eyes Window     ${TEST_NAME}-${SAUCE_CAPABILITIES}_work_page    False
 
 I should see the IDEAS page
   Title Should Be       ${IDEAS_PAGE_TITLE}
-  Capture Page Screenshot   screenshots/home/ideas/${TEST_NAME}_ideas_page.png
+  Capture Page Screenshot   screenshots/home/ideas/${TEST_NAME}-${SAUCE_CAPABILITIES}_ideas_page.png
   Run keyword if  '${APPLITOOLS_KEY}' != ''
-  ...   Check Eyes Window     ${TEST_NAME}_ideas_page    False
+  ...   Check Eyes Window     ${TEST_NAME}-${SAUCE_CAPABILITIES}_ideas_page    False
 
 I should see the PEOPLE page
   Title Should Be       ${PEOPLE_PAGE_TITLE}
-  Capture Page Screenshot   screenshots/home/people/${TEST_NAME}_people_page.png
+  Capture Page Screenshot   screenshots/home/people/${TEST_NAME}-${SAUCE_CAPABILITIES}_people_page.png
   Run keyword if  '${APPLITOOLS_KEY}' != ''
-  ...   Check Eyes Window     ${TEST_NAME}_people_page    False
+  ...   Check Eyes Window     ${TEST_NAME}-${SAUCE_CAPABILITIES}_people_page    False
 
 I should see the CAREERS page
   Title Should Be       ${CAREERS_PAGE_TITLE}
-  Capture Page Screenshot   screenshots/home/people/careers/${TEST_NAME}_careers_page.png
+  Capture Page Screenshot   screenshots/home/people/careers/${TEST_NAME}-${SAUCE_CAPABILITIES}_careers_page.png
   Run keyword if  '${APPLITOOLS_KEY}' != ''
-  ...   Check Eyes Window     ${TEST_NAME}_careers_page    False
+  ...   Check Eyes Window     ${TEST_NAME}-${SAUCE_CAPABILITIES}_careers_page    False
 
 I should see the ABOUT page
   Title Should Be       ${ABOUT_PAGE_TITLE}
-  Capture Page Screenshot   screenshots/home/about/${TEST_NAME}_about_page.png
+  Capture Page Screenshot   screenshots/home/about/${TEST_NAME}-${SAUCE_CAPABILITIES}_about_page.png
   Run keyword if  '${APPLITOOLS_KEY}' != ''
-  ...   Check Eyes Window     ${TEST_NAME}_about_page    False
+  ...   Check Eyes Window     ${TEST_NAME}-${SAUCE_CAPABILITIES}_about_page    False
 
 I should see the CONTACT page
   Title Should Be       ${CONTACT_PAGE_TITLE}
-  Capture Page Screenshot   screenshots/home/contact/${TEST_NAME}_contact_page.png
+  Capture Page Screenshot   screenshots/home/contact/${TEST_NAME}-${SAUCE_CAPABILITIES}_contact_page.png
   Run keyword if  '${APPLITOOLS_KEY}' != ''
-  ...   Check Eyes Window     ${TEST_NAME}_contact_page    False
+  ...   Check Eyes Window     ${TEST_NAME}-${SAUCE_CAPABILITIES}_contact_page    False
 
 I should see the HOME page
   Title Should Be       ${HOME_PAGE_TITLE}
-  Capture Page Screenshot   screenshots/home/${TEST_NAME}_home_page.png
+  Capture Page Screenshot   screenshots/home/${TEST_NAME}-${SAUCE_CAPABILITIES}_home_page.png
   Run keyword if  '${APPLITOOLS_KEY}' != ''
-  ...   Check Eyes Window     ${TEST_NAME}_home_page    False
+  ...   Check Eyes Window     ${TEST_NAME}-${SAUCE_CAPABILITIES}_home_page    False
 
 I should see Medullan's Twitter page in a new tab
   Title Should Be       ${TWITTER_TITLE}
-  Capture Page Screenshot   screenshots/external/${TEST_NAME}_twitter.png
+  Capture Page Screenshot   screenshots/external/${TEST_NAME}-${SAUCE_CAPABILITIES}_twitter.png
   Run keyword if  '${APPLITOOLS_KEY}' != ''
-  ...   Check Eyes Window     ${TEST_NAME}_twitter    False
+  ...   Check Eyes Window     ${TEST_NAME}-${SAUCE_CAPABILITIES}_twitter    False
 
 I should see Medullan's LinkedIn page in a new tab
   Title Should Be       ${LINKEDIN_TITLE}
-  Capture Page Screenshot   screenshots/external/${TEST_NAME}_linkedin.png
+  Capture Page Screenshot   screenshots/external/${TEST_NAME}-${SAUCE_CAPABILITIES}_linkedin.png
   Run keyword if  '${APPLITOOLS_KEY}' != ''
-  ...   Check Eyes Window     ${TEST_NAME}_linkedin    False
+  ...   Check Eyes Window     ${TEST_NAME}-${SAUCE_CAPABILITIES}_linkedin    False
 
 
 #   END APP-SPECIFIC KEYWORDS
