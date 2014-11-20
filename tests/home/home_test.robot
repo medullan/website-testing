@@ -75,6 +75,7 @@ I can navigate to Medullan's LinkedIn account from the image on the footer
 
   #   HEADER TESTS
 I can access the WORK page from the header on the HOME page
+  [Tags]    testthis
   Given I am on the home page
   When I navigate to the WORK page using the link in the header
   Then I should see the WORK page
