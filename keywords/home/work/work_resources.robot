@@ -19,13 +19,14 @@ Client Logo Text
   [Arguments]   ${CLIENT_LOGO_ID}
 
 I hover over
-  [Arguments]   ${CLIENT_LOGO_ID}
-  Mouse Over   jquery=[id$="${CLIENT_LOGO_ID}"] img
+  [Arguments]   ${CLIENT_ALT_TEXT}
+  Mouse Over   jquery=img[alt="${CLIENT_ALT_TEXT}"]
 
 I should see the tooltip for
   [Arguments]   ${CLIENT_LOGO_ID}
   Element Should Be Visible   jquery=[role="tooltip"] [class="ui-tooltip-content"]
+  #  Element Text Should Be      jquery=[role="tooltip"] [class="ui-tooltip-content"]    Client Logo Text    ${CLIENT_LOGO_ID}
+  #   Use here to test the contents of the popup text. will need additional variables.
   Capture Page Screenshot   screenshots/home/work/${TEST_NAME}-${SAUCE_CAPABILITIES}_tooltip.png
   Run keyword if  '${APPLITOOLS_KEY}' != ''
   ...   Check Eyes Window     ${TEST_NAME}-${SAUCE_CAPABILITIES}tooltip    False
-#  Element Text Should Be      jquery=[role="tooltip"] [class="ui-tooltip-content"]    Client Logo Text    ${CLIENT_LOGO_ID}
