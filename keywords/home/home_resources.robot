@@ -34,7 +34,8 @@ I click the View Our Work link on the HOME page
   Wait Until Keyword Succeeds   20s   1s    Title Should Be   ${WORK_PAGE_TITLE}
 
 I click the Get in Touch box on the HOME page
-  #   NOT FUNCTIONING YET
+  Click Image  ${GET_IN_TOUCH_ALT_TEXT}
+  Wait Until Keyword Succeeds   20s   1s    Title Should Be   ${CONTACT_PAGE_TITLE}
 
 I click the View More link on the HOME page
   Click Link    VIEW MORE >
