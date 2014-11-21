@@ -18,6 +18,8 @@ TUFTS_ALT_TEXT = 'tuffs-logo.jpg'
 VERIZON_ALT_TEXT = 'verizon-logos-sm.jpg'
 YOU_ALT_TEXT = 'youplus.jpg'
 
+GET_IN_TOUCH_ALT_TEXT = 'Button_Interested.jpg'
+
 ITEM_SUMMARY_PAGE = ''
 
 IDEAS_SUMMARY_ID = '_421'
