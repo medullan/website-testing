@@ -149,9 +149,9 @@ I can see the tooltips when I hover over client logo for VERIZON
   When I hover over   ${VERIZON_ALT_TEXT}
   Then I should see the tooltip for   ${VERIZON_ALT_TEXT}
 
-I can see the tooltips when I hover over client logo for YOU
-  [Tags]    ignore
+#I can see the tooltips when I hover over client logo for YOU
+  #[Tags]    ignore
   #   No tooltip for this. Clickable link
-  Given I am on the work page
-  When I hover over   ${YOU_ALT_TEXT}
-  Then I should see the tooltip for   ${YOU_ALT_TEXT}
+  #Given I am on the work page
+  #When I hover over   ${YOU_ALT_TEXT}
+  #Then I should see the tooltip for   ${YOU_ALT_TEXT}

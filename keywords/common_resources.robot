@@ -21,12 +21,12 @@ ${TEST_STATUS}
 #       with the EM dashes in the app_variables.py
 
 ${HOME_PAGE_TITLE}          Digital Health Consultancy | Medullan
-${ABOUT_PAGE_TITLE}         About Us. — Digital Health Consultancy | Medullan
-${CONTACT_PAGE_TITLE}       Contact. — Digital Health Consultancy | Medullan
-${IDEAS_PAGE_TITLE}         Ideas. — Digital Health Consultancy | Medullan
-${PEOPLE_PAGE_TITLE}        People. — Digital Health Consultancy | Medullan
-${CAREERS_PAGE_TITLE}       Careers. — Digital Health Consultancy | Medullan
-${WORK_PAGE_TITLE}          Work. — Digital Health Consultancy | Medullan
+${ABOUT_PAGE_TITLE}         About Us. — ${HOME_PAGE_TITLE}
+${CONTACT_PAGE_TITLE}       Contact. — ${HOME_PAGE_TITLE}
+${IDEAS_PAGE_TITLE}         Ideas. — ${HOME_PAGE_TITLE}
+${PEOPLE_PAGE_TITLE}        People. — ${HOME_PAGE_TITLE}
+${CAREERS_PAGE_TITLE}       Careers. — ${HOME_PAGE_TITLE}
+${WORK_PAGE_TITLE}          Work. — ${HOME_PAGE_TITLE} 
 ${TWITTER_TITLE}            Medullan, Inc. (@medullan) | Twitter
 ${LINKEDIN_TITLE}           Medullan | LinkedIn
 
