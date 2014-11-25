@@ -15,7 +15,6 @@ Library           RobotAppEyes
 *** Variables ***
 ${TEST_NAME}
 ${TEST_TAGS}
-${TEST_STATUS}
 
 #       These Variables are used here to bypass the UTF-8 encoding issue
 #       with the EM dashes in the app_variables.py
@@ -26,7 +25,7 @@ ${CONTACT_PAGE_TITLE}       Contact. — ${HOME_PAGE_TITLE}
 ${IDEAS_PAGE_TITLE}         Ideas. — ${HOME_PAGE_TITLE}
 ${PEOPLE_PAGE_TITLE}        People. — ${HOME_PAGE_TITLE}
 ${CAREERS_PAGE_TITLE}       Careers. — ${HOME_PAGE_TITLE}
-${WORK_PAGE_TITLE}          Work. — ${HOME_PAGE_TITLE} 
+${WORK_PAGE_TITLE}          Work. — ${HOME_PAGE_TITLE}
 ${TWITTER_TITLE}            Medullan, Inc. (@medullan) | Twitter
 ${LINKEDIN_TITLE}           Medullan | LinkedIn
 
@@ -59,7 +58,7 @@ Teardown Take Failure Snapshot
     Run keyword if  '${SAUCE_URL}' != ''
     ...   Report Sauce status
     ...     ${SUITE_NAME} | ${TEST_NAME}
-    ...     ${TEST_STATUS}  ${TEST_TAGS}  ${SAUCE_URL}
+    ...     ${SUITE_STATUS}  ${TEST TAGS}  ${SAUCE_URL}
     Run keyword if  '${APPLITOOLS_KEY}' != ''
     ...   Run Keyword And Continue On Failure   Close Eyes Session
     Close all browsers
@@ -68,7 +67,7 @@ Teardown Browser
     Run keyword if  '${SAUCE_URL}' != ''
     ...   Report Sauce status
     ...     ${SUITE_NAME} | ${TEST_NAME}
-    ...     ${TEST_STATUS}  ${TEST_TAGS}  ${SAUCE_URL}
+    ...     ${SUITE_STATUS}  ${TEST TAGS}  ${SAUCE_URL}
     Run keyword if  '${APPLITOOLS_KEY}' != ''
     ...   Run Keyword And Continue On Failure   Close Eyes Session
     Close all browsers
